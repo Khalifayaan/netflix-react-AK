@@ -1,16 +1,22 @@
-function MovieCard() {
+
+
+
+
+import React from "react";
+
+function MovieCard({ name, rating, type, site }) {
   return (
     <div className="movie-card">
       <div className="movie-image">
-        <img
-          src="https://i.pinimg.com/originals/a2/34/75/a234753b69e3bd27b7f1d448956c38af.jpg"
-          alt="movie"
-        />
+        <img src={site} alt="movie" />
       </div>
-
-      <h3 className="movie-heading">Breaking Bad</h3>
+      <h3 className="movie-heading">{name}</h3>
+      <p>Rating: {rating}</p>
+      <p>Type: {type}</p>
     </div>
   );
 }
 
 export default MovieCard;
+
+
